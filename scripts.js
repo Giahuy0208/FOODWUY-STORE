@@ -438,7 +438,7 @@ loginBtn.addEventListener("click", () => {
 });
 
 document.getElementById("registerBtn").addEventListener("click", () => {
-  window.location.href = "/register/register.html";
+  window.location.href = "register/register.html";
 });
 
 closeLoginPopup.addEventListener("click", () => {
