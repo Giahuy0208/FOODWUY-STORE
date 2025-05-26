@@ -9,7 +9,7 @@
   justify-content: start;
   gap: 10px;
   margin-bottom: 20px;
-  margin-left: -70px;
+  margin-left: -130px;
 }
 
 .text-menu{
@@ -224,7 +224,7 @@ body {
 }
 
 .btn-submit {
-  background-color: rgba(255, 73, 73, 0.897);
+  background-color: rgba(255, 24, 24, 0.897);
   box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.327);
   width: 70px;
   height: 41px;
@@ -234,6 +234,10 @@ body {
   border: none;
   font-weight: 600;
   cursor: pointer;
+}
+
+.btn-submit:hover{
+  background-color: rgb(255, 0, 0);
 }
 
 .content-right {
@@ -1119,7 +1123,7 @@ body {
 
 .slider-btn {
   position: absolute;
-  top: 75%;
+  top: 78%;
   transform: translateY(-50%);
   font-size: 12px;
   background-color: rgba(255, 164, 73, 0.825);
@@ -1136,12 +1140,18 @@ body {
   background-color: rgba(255, 142, 29, 0.925);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .slider-btn.prev {
   left: 95px;
+  margin-top:55px;
 }
 
 .slider-btn.next {
   right: 95px;
+  margin-top:52px;
 }
 
 .slider-dots {
@@ -1149,7 +1159,7 @@ body {
   justify-content: center;
   gap: 10px;
   position: absolute;
-  bottom: 179px;
+  bottom: 90px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
