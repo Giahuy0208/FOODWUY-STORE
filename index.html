@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FooD_Wuy</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+    <!--HEADER WEB-->
+    <header class="dock-bar">
+      <img class="imgLogo" src="/LogoHome/Logoweb1.png" alt="Logo" />
+      <div class="bar-right">
+        <div class="item" id="home-btn">
+          <img
+            src="/icon-header/home.png"
+            alt="home"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+         <a class="trangchu" href="#" > Trang chủ</a>
+        </div>
+        <div class="item" id="headerCartBtn">
+          <img
+            src="/icon-header/cart.png"
+            alt="cart"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Giỏ hàng
+          <span class="cart-count-header" id="cart-count-header">0</span>
+        </div>
+        <div class="item" id="contactBtn">
+          <img
+            src="/icon-header/contact.png"
+            alt="contact"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Liên hệ
+        </div>
+        <!--Drop Menu khi di chuot vao THAM GIA-->
+        <div class="item join-dropdown" id="joinBtn">
+          <img
+            src="/icon-header/user.png"
+            alt="join"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Tham gia
+          <div class="dropdown-menu">
+            <div class="dropdown-item" id="loginBtn">Đăng nhập</div>
+            <div class="dropdown-item" id="registerBtn">Đăng ký</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main-web">
+        <div class="content-left">
+          <h1 class="text">
+            Chào Mừng đến<br />với thế giới<br /><span class="wel"
+              >thức ăn nhanh và chill.</span
+            >
+          </h1>
+          <p class="text1">
+            FoodWuy nơi mang đến trải nghiệm độc đáo, hệ thống hoạt động nhanh với lượng nhân viên và nhiều chi nhánh lớn 
+            trải dài khắp các tỉnh thành. Chúng tôi luôn mong muốn đem lại trải nghiệm tốt nhất cho khách hàng và luôn đặt trải
+             nghiệm người dùng lên hàng đầu.Cảm ơn các khách hàng đã luôn tin tưởng FoodWuy, chúng tôi luôn đông hành cùng các bạn.
+          </p>
+          <div class="bar-timkiem" id="search">
+            <input type="text" class="btn-search" placeholder="Tìm kiếm" />
+            <button id="thucdon" class="btn-submit">Tìm</button>
+          </div>
+        </div>
+        <div class="content-right slider-container">
+          <div class="slider" id="slider">
+            <img src="/img-food/piza.png" class="slide active" />
+            <img src="/img-food/burger.png" class="slide" />
+            <img src="/img-food/spaghetti.png" class="slide" />
+          </div>
+          <button class="slider-btn prev" id="prevBtn">❮</button>
+          <button class="slider-btn next" id="nextBtn">❯</button>
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <hr  />
+      <section class="menu-tabs">
+        <div class="tab-buttons">
+          <p class="text-menu">Thực đơn:</p>
+          <button class="tab-btn active" data-tab="food">Đồ ăn nhanh</button>
+          <button class="tab-btn" data-tab="drink">Thức uống</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-pane active" id="food-container">
+            <div class="main-food">
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp1.html" style="text-decoration: none">
+                   <img
+                    src="/img-food/burger.png"
+                    class="food-img"
+                    alt="Hamburger truyền thống"
+                  /></a>
+                  <div class="food-content">
+                    <h3 class="food-title">Hamburger Truyền Thống</h3>
+                    <p class="food-price">85.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+              
+            
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp2.html" style="text-decoration: none">  <img
+                    src="/img-food/Taco.png"
+                    class="food-img"
+                    alt="Bánh Taco Pháp"
+                  /> </a>
+                  <div class="food-content">
+                    <h3 class="food-title">Bánh Taco Pháp</h3>
+                    <p class="food-price">90.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+             
+
+             
+                <div class="food-card">
+                <a href="/infor-sp-food/sp3.html" style="text-decoration: none">   <img
+                    src="/img-food/spaghetti.png"
+                    class="food-img"
+                    alt="Mỳ Ý Spaghetti"
+                  /> </a>
+                  <div class="food-content">
+                    <h3 class="food-title">Mỳ Ý Spaghetti</h3>
+                    <p class="food-price">110.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+             
+            </div>
+            <div class="main-food">
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp4.html" style="text-decoration: none"> <img
+                    src="/img-food/beef.png"
+                    class="food-img"
+                    alt="Bò Beefsteak sốt chua ngọt"
+                  /></a>
+                  <div class="food-content">
+                    <h3 class="food-title">Beefsteak Sốt Chua Ngọt</h3>
+                    <p class="food-price">190.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+              
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp5.html" style="text-decoration: none"> <img
+                    src="/img-food/pizza.png"
+                    class="food-img"
+                    alt="Bánh Pizza Ý"
+                  />  </a>
+                  <div class="food-content">
+                    <h3 class="food-title">Bánh Pizza Ý</h3>
+                    <p class="food-price">150.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+            
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp6.html" style="text-decoration: none"> <img
+                    src="/img-food/Soup.png"
+                    class="food-img"
+                    alt="Súp gà phô mai"
+                  /> </a>
+                  <div class="food-content">
+                    <h3 class="food-title">Súp gà phô mai</h3>
+                    <p class="food-price">150.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+             
+            </div>
+            <div class="main-food">
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp7.html" style="text-decoration: none"> <img
+                    src="/img-food/Banh_mi_nuong_bo.png"
+                    class="food-img"
+                    alt="Bánh mì nướng bơ"
+                  /></a
+              >
+                  <div class="food-content">
+                    <h3 class="food-title">Bánh Mì Nướng Bơ</h3>
+                    <p class="food-price">29.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+             
+                <div class="food-card">
+                  <a href="/infor-sp-food/sp8.html" style="text-decoration: none"> <img
+                    src="/img-food/Beefsteek_sốt_cam.png"
+                    class="food-img"
+                    alt="Beefsteak sốt cam"
+                  /></a
+              >
+                  <div class="food-content">
+                    <h3 class="food-title">Beefsteak Sốt Cam</h3>
+                    <p class="food-price">352.000 VND</p>
+                    <div class="food-actions">
+                      <button class="order-food">Đặt hàng</button>
+                      <button class="add-food">+ Giỏ hàng</button>
+                    </div>
+                  </div>
+                </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/bò_áp_chảo.png"
+                  class="food-img"
+                  alt="Bò Kube áp chảo"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Bò Kube áp chảo</h3>
+                  <p class="food-price">425.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/Bittet_khoai_tay_chien.png"
+                  class="food-img"
+                  alt="Beefsteak khoai tây chiên"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Beefsteak khoai tây chiên</h3>
+                  <p class="food-price">250.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Cari_cay_kiểu_Ấn.png"
+                  class="food-img"
+                  alt="Carry Cay kiểu Ấn"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Carry Cay kiểu Ấn</h3>
+                  <p class="food-price">128.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Cari_gà_sốt_kem_cay.png"
+                  class="food-img"
+                  alt="Carry gà sốt kem cay"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Carry gà sốt kem cay</h3>
+                  <p class="food-price">145.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/com_luong_kieu nhat_ban.png"
+                  class="food-img"
+                  alt="Cơm lươn Nhật Bản"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Cơm lươn Nhật Bản</h3>
+                  <p class="food-price">95.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Combo4Tacos.png"
+                  class="food-img"
+                  alt="Combo 4 bánh Tacos"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Combo 4 bánh Tacos</h3>
+                  <p class="food-price">428.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Combo_hamburger+Khoai.png"
+                  class="food-img"
+                  alt="Combo Hamburger + khoai chiên"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Combo Hamburger + khoai chiên</h3>
+                  <p class="food-price">150.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/Sandwitch_salad.png"
+                  class="food-img"
+                  alt="Sandwitch Salad"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Sandwich Salad</h3>
+                  <p class="food-price">70.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Mì_xào_tôm.png"
+                  class="food-img"
+                  alt="Mì xào siêu tôm"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Mì xào siêu tôm</h3>
+                  <p class="food-price">185.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Sushi_cá_hồi.png"
+                  class="food-img"
+                  alt="Sushi Cá hồi Nhật Bản"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Sushi Cá hồi Nhật Bản</h3>
+                  <p class="food-price">210.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/Mì_Ý_sốt_chua_ngọt.png"
+                  class="food-img"
+                  alt="Mì Ý sốt chua ngọt"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Mì Ý sốt chua ngọt</h3>
+                  <p class="food-price">168.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/sandwitch-thitxongkhoi.png"
+                  class="food-img"
+                  alt="Sandwitch thịt xông khói"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Sandwitch thịt xông khói</h3>
+                  <p class="food-price">127.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Xiên_thịt_viên_nướng.png"
+                  class="food-img"
+                  alt="Xiên thịt viên nướng"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Xiên thịt viên nướng</h3>
+                  <p class="food-price">80.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/Mì_xào_thịt_cọng_to.png"
+                  class="food-img"
+                  alt="Mì xào sợi to"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Mì xào sợi to</h3>
+                  <p class="food-price">140.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Thitheo+trứng.png"
+                  class="food-img"
+                  alt="Thịt heo trứng luộc"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Thịt heo trứng luộc</h3>
+                  <p class="food-price">213.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/VanillaSandwid.png"
+                  class="food-img"
+                  alt="Vanilla Sandwitch"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Vanilla Sandwitch</h3>
+                  <p class="food-price">69.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-food/Vịt_xào_rừng.png"
+                  class="food-img1"
+                  alt="Vịt xào rừng"
+                  width="270"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Vịt xào gừng</h3>
+                  <p class="food-price">110.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/bánh_mì_phết_bơ.png"
+                  class="food-img"
+                  alt="Bánh mì phết bơ"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Bánh mì phết bơ</h3>
+                  <p class="food-price">55.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-food/Crrry_gà_nhạt.png"
+                  class="food-img"
+                  alt="Carry Gà kiểu Pháp"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Carry Gà kiểu Pháp</h3>
+                  <p class="food-price">175.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination" id="food-pagination"></div>
+          </div>
+          
+          <div class="tab-pane" id="drink-container">
+            <div class="main-food">
+               
+              <div class="food-card">
+               <a href="/infor-sp-drink/sp1.html" style="text-decoration: none"> <img
+                  src="/img-drinks/Hinh-Web-OKINAWA-TRÀ-SỮA.png"
+                  class="food-img"
+                  alt="milk-tea-okinawa"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Okinawa</h3>
+                  <p class="food-price">65.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="food-card">
+                <a href="/infor-sp-drink/sp2.html" style="text-decoration: none"> <img
+                  src="/img-drinks/Mango-Matcha-Latte.png"
+                  class="food-img"
+                  alt="Mango-Matcha-Latte"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Matcha Latte Xoài</h3>
+                  <p class="food-price">60.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="food-card">
+                <a href="/infor-sp-drink/sp3.html" style="text-decoration: none"><img
+                  src="/img-drinks/OKINAWA-8.png"
+                  class="food-img"
+                  alt="Matcha-onikawa"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Matcha Okinawa</h3>
+                  <p class="food-price">75.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+             
+              <div class="food-card">
+                <a href="/infor-sp-drink/sp4.html" style="text-decoration: none"> <img
+                  src="/img-drinks/Strawberry-Earl-grey-latte.png"
+                  class="food-img"
+                  alt="Sua-chua-dau-latte"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Latte Mứt Dâu</h3>
+                  <p class="food-price">68.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="food-card">
+                 <a href="/infor-sp-drink/sp5.html" style="text-decoration: none"><img
+                  src="/img-drinks/Okinawa-Milk-Foam-Smoothie.png"
+                  class="food-img"
+                  alt="Okinawa-oreo"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Okinawa Oreo</h3>
+                  <p class="food-price">77.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+             
+              <div class="food-card">
+                 <a href="/infor-sp-drink/sp6.html" style="text-decoration: none"><img
+                  src="/img-drinks/Strawberry-Oreo-Smoothie.png"
+                  class="food-img"
+                  alt="Dau-oreo"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Dâu Oreo Đá Xay</h3>
+                  <p class="food-price">85.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              
+              <div class="food-card">
+                <a href="/infor-sp-drink/sp7.html" style="text-decoration: none"><img
+                  src="/img-drinks/Tra-sua-earl grey.png"
+                  class="food-img"
+                  alt="Tra-sua-earl"
+                /></a>
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Earl Grey</h3>
+                  <p class="food-price">62.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/TRA-XANH-BAP.png"
+                  class="food-img"
+                  alt="Trà TRA-XANH-BAP"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà Xanh Bắp Gongcha</h3>
+                  <p class="food-price">65.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Trà-Bí-Đao-2.png"
+                  class="food-img"
+                  alt="Trà-Bí-Đao-2"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà bí đao Gongcha</h3>
+                  <p class="food-price">58.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Trà-sữa-Khoai-môn-2.png"
+                  class="food-img"
+                  alt="Trà-sữa-Khoai-môn-2"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Khoai Môn</h3>
+                  <p class="food-price">58.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Trà-sữa-Pudding-đậu-đỏ-2.png"
+                  class="food-img"
+                  alt="Trà-sữa-Pudding-đậu-đỏ-2"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Pudding Đậu Đỏ</h3>
+                  <p class="food-price">82.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Trà-sữa-Trân-châu-đen-1.png"
+                  class="food-img"
+                  alt="Chan-chau-den"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà Sữa Chân Trâu</h3>
+                  <p class="food-price">66.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="main-food">
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Trà-Xanh-2.png"
+                  class="food-img"
+                  alt="Tra-xanh"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Trà Xanh Gongcha</h3>
+                  <p class="food-price">52.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Yakult-Dao-Da-Xay.png"
+                  class="food-img"
+                  alt="Yakult-Dao-Da-Xay"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Yakult Đào Đá Xay</h3>
+                  <p class="food-price">89.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+              <div class="food-card">
+                <img
+                  src="/img-drinks/Đen-đào-2.png"
+                  class="food-img"
+                  alt="Đen-đào-2"
+                />
+                <div class="food-content">
+                  <h3 class="food-title">Đen Đào Gongcha</h3>
+                  <p class="food-price">64.000 VND</p>
+                  <div class="food-actions">
+                    <button class="order-food">Đặt hàng</button>
+                    <button class="add-food">+ Giỏ hàng</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+             <div class="pagination" id="drink-pagination"></div>
+          </div>
+         
+        </div>
+      </section>
+    </main>
+   <!--Footer cho web-->
+   <footer class="footer" style="background-color: #333; color: rgb(189, 189, 189); padding: 40px 20px;">
+  <div class="footer-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; max-width: 1200px; margin: auto;">
+    
+    <!-- Cột 1: Bản đồ -->
+    <div style="flex: 1.5; min-width: 250px;">
+      <h3 style="color:white;">Địa chỉ trên bản đồ:</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.331373177018!2d105.38923987997754!3d10.553221062721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a157fb8412f75%3A0x6fc336d02d70595b!2zTmjDoCBDw6AgUGjDqg!5e0!3m2!1svi!2sus!4v1748236231217!5m2!1svi!2sus"
+        width="100%" height="360" style="border: 0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Cột 2: Tên + slogan + liên hệ -->
+    <div style="flex: 1; min-width: 240px;">
+      <h2 style="font-weight: bold; margin-bottom: 8px; color: #ffbb33;">FooD_Wuy</h2>
+      <p>Ngon lành - Nhanh chóng - Đậm đà hương vị Việt</p>
+      <div style="margin-top: 130px;">
+        <h3 style="color:white;">Liên hệ</h3>
+        <p style="margin: 0;">Địa chỉ: Kiến An, Đường TL942,<br />huyện Chợ Mới, tỉnh An Giang.</p>
+        <p style="margin: 0;">Hotline:<a href="tel:0393730755" style="text-decoration: none; color:white;"> 0393730755</a></p>
+        <p style="margin: 0;">Email: giahuylx0208@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Cột trung tâm gồm: Liên kết nhanh + Chính sách + MXH -->
+    <div style="flex: 1.5; min-width: 300px;">
+      <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+        <!-- Liên kết nhanh -->
+        <div style="flex: 1; min-width: 120px;">
+          <h3 style="color:white;">Liên kết nhanh</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><a class="lienketnhanh" href="../index.html" style="text-decoration: none;">Trang chủ</a></li>
+            <li><a class="lienketnhanh" href="#" id="aboutUsBtn" style="text-decoration: none;">Về chúng tôi</a></li>
+            <li><a class="lienketnhanh" href="#footerContactBtn" id="footerContactBtn" style="text-decoration: none;">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <!-- Chính sách -->
+        <div style="flex: 1; min-width: 120px;">
+          <h3 style="color:white;">Chính sách</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><a  class="chinhsach" href="./web-footer/chinhsachhd.html" style="text-decoration: none;">Chính sách hoạt động</a></li>
+            <li><a  class="chinhsach" href="/web-footer/chinhsachqd.html" style="text-decoration: none;">Chính sách và quy định</a></li>
+            <li><a  class="chinhsach" href="/web-footer/chinhsachbmtt.html" style="text-decoration: none;">Chính sách bảo mật thông tin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MXH nằm dưới 2 cột kia -->
+      <div style="margin-top: 92px;">
+        <h3 style="color:white;">Liên hệ mạng xã hội</h3>
+        <div style="display: flex; gap: 12px; margin-top: 12px;">
+          <a href="https://www.facebook.com/" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 20px;" />
+          </a>
+          <a href="https://www.instagram.com/_h.zhui?igsh=MXRoaTh6cnoxN2F4aQ%3D%3D&utm_source=qr" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px;" />
+          </a>
+          <a href="https://www.youtube.com/@zhuy2826" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 22px;" />
+          </a>
+          <a href="tel:0393730755" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Twitter" style="width: 20px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; padding-top: 20px; margin-top: 40px; border-top: 1px solid #555;">
+    <p>© 2025 FooD_Wuy. All rights reserved.</p>
+  </div>
+</footer>
+    <!--POPUP giỏ hàng-->
+    <div class="popup-overlay" id="orderPopup">
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">×</span>
+        <h2>Đặt hàng nhanh</h2>
+        <form id="orderForm">
+          <label for="foodName">Món ăn:</label>
+          <input type="text" id="foodName" name="foodName" readonly />
+          <label for="quantity">Số lượng:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            value="1"
+            required
+          />
+          <label for="customerName">Tên bạn:</label>
+          <input type="text" id="customerName" name="customerName" required />
+          <label for="phone">Số điện thoại:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="diachi">Địa chỉ:</label>
+          <input type="text" id="diachi" name="diachi" required />
+          <button type="submit">Gửi đơn hàng</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" id="cart-icon" onclick="openCart()">
+      <img src="/icon-header/cart.png" alt="Cart" />
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!--POPUP giỏ hàng-->
+    <div class="popup-overlay" id="cartPopup">
+      <div class="cart-content">
+        <span class="close-cart" id="closeCart">×</span>
+        <h2>Giỏ hàng của bạn</h2>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total-section">
+          <span class="cart-total" id="cartTotal">0 VND</span>
+          <button class="clear-cart-btn" id="clearCartBtn">Xóa tất cả</button>
+        </div>
+        <form id="cartOrderForm">
+          <h3>Thông tin đặt hàng</h3>
+          <label for="cusName">Tên bạn:</label>
+          <input type="text" id="cusName" name="cusName" required />
+          <label for="cusPhone">Số điện thoại:</label>
+          <input type="tel" id="cusPhone" name="cusPhone" required />
+          <label for="diachi">Địa chỉ:</label>
+          <input type="text" id="diachi" name="diachi" required />
+          <button type="submit">Đặt hàng</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="notificationPopup">
+      <div class="notification-content">
+        <span class="close-notification" id="closeNotification">×</span>
+        <div class="notification-icon" alt="Success">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+          >
+            <path
+              fill="#2ecc71"
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.7 14.3L6.7 12l1.4-1.4 2.2 2.2 5.6-5.6 1.4 1.4-7 7z"
+            />
+          </svg>
+        </div>
+        <h3 id="notificationTitle">Thành công!</h3>
+        <p id="notificationMessage">Đã xóa tất cả sản phẩm khỏi giỏ hàng.</p>
+        <button id="notificationOkBtn">OK</button>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="confirmPopup">
+      <div class="confirm-content">
+        <span class="close-confirm" id="closeConfirm">×</span>
+        <div class="confirm-icon" alt="Confirm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+          >
+            <path
+              fill="#f39c12"
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+            />
+          </svg>
+        </div>
+        <h3 id="confirmTitle">Xác nhận</h3>
+        <p id="confirmMessage">
+          Bạn có chắc chắn muốn xóa tất cả sản phẩm khỏi giỏ hàng?
+        </p>
+        <div class="confirm-buttons">
+          <button id="confirmCancelBtn">Hủy</button>
+          <button id="confirmOkBtn">Xóa tất cả</button>
+        </div>
+      </div>
+    </div>
+    <!--POPUP Đăng nhập nhanh-->
+    <div class="popup-overlay" id="loginPopup">
+      <div class="popup-content">
+        <span class="close-btn" id="closeLoginPopup">×</span>
+        <h2 class="title-login">Đăng nhập</h2>
+        <form id="loginForm">
+          <label for="loginUsername">Tên đăng nhập:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required />
+
+          <label for="loginPassword">Mật khẩu:</label>
+          <input
+            type="password"
+            id="loginPassword"
+            name="loginPassword"
+            required
+          />
+          <div class="remember-group">
+            <input type="checkbox" id="rememberMe" />
+            <label class="text-rememberMe" for="rememberMe"
+              >Ghi nhớ đăng nhập</label
+            >
+          </div>
+
+          <button type="submit">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+    <!--POPUP Liên Hệ-->
+    <div class="popup-overlay" id="contactPopup">
+      <div class="contact-content">
+        <span class="close-contact" id="closeContact">×</span>
+        <h2>Liên hệ với FooD_Wuy</h2>
+        <div class="contact-grid">
+          <a href="https://www.facebook.com/hghuy06/" class="contact-tile fb">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+              alt="Facebook"
+            />
+            <span>Facebook</span>
+          </a>
+          <a href="tel:0393730755" class="contact-tile zalo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+              alt="Zalo"
+            />
+            <span>Zalo</span>
+          </a>
+          <a href="mailto:giahuylx0208@gmail.com" class="contact-tile gmail">
+            <img
+              src="https://images.icon-icons.com/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png"
+              alt="Email"
+            />
+            <span>Email</span>
+          </a>
+          <a href="tel:0393730755" class="contact-tile phone">
+            <img
+              src="https://freesvg.org/img/phone-call-icon.png"
+              alt="Phone"
+            />
+            <span>Hotline</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--POPUP VỀ CHÚNG TÔI-->
+    <div class="popup-overlay" id="aboutUsPopup">
+      <div class="aboutus-content">
+        <span class="close-aboutus" id="closeAboutUs">×</span>
+        <div class="aboutus-header">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+            alt="About Us"
+          />
+          <h2>Giới thiệu về <span class="brand-name">FooD_Wuy</span></h2>
+        </div>
+        <div class="aboutus-text">
+          <p>
+            <strong>FooD_Wuy</strong> là nơi chuyên cung cấp các món
+            <span class="highlight">đồ ăn nhanh</span> và
+            <span class="highlight">thức uống</span> chất lượng, được chế biến
+            sạch sẽ, ngon miệng và giao hàng tận nơi cực nhanh!
+          </p>
+          <p>
+            Với tiêu chí
+            <em
+              >"<span class="highlight"
+                >Ngon lành - Nhanh chóng - Chill cùng bạn!</span
+              >"</em
+            >, tụi mình luôn nỗ lực để mang đến trải nghiệm tuyệt vời nhất cho
+            khách hàng.
+          </p>
+          <p>Cảm ơn bạn đã tin tưởng và ủng hộ ❤️!</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

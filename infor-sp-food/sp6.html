@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FooD_Wuy</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script defer src="../scripts.js"></script>
+    <style>
+      .product-detail {
+        display: flex;
+        max-width: 1100px;
+        margin: 10px auto;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+      }
+
+      .product-image {
+        flex: 1;
+        background: #ffe6eb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .product-image img {
+        width: 100%;
+        max-width: 350px;
+        object-fit: contain;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-18px);
+        }
+      }
+
+
+      .product-info {
+        flex: 1;
+        padding: 40px 50px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .product-info h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .product-info .price {
+        font-size: 24px;
+        font-weight: bold;
+        color: #e74c3c;
+        margin-bottom: 20px;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .info-list li {
+        margin-bottom: 12px;
+      }
+
+      .food-actions {
+        display: flex;
+        gap: 16px;
+      }
+
+      .food-actions .add-food {
+        background-color: #ff4d4d;
+        color: white;
+        font-weight: 600;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .food-actions .order-food {
+        background-color: #2ecc71;
+        color: white;
+        font-weight: 600;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .food-actions button:hover {
+        filter: contrast(1.5);
+      }
+
+   .back-to-menu {
+  margin: 20px auto 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.back-to-menu a {
+  text-decoration: none;
+  color: #ff4d4d;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-to-menu a:hover {
+  background-color: #ff4d4d;
+  color: rgb(255, 255, 255);
+}
+
+.chinhsach{
+  color: rgb(189, 189, 189);
+}
+.chinhsach:hover{
+  color:#ffbb33;
+
+}
+.lienketnhanh{
+  color: rgb(189, 189, 189);
+}
+.lienketnhanh:hover{
+   color:#ffbb33;
+
+}
+
+    </style>
+  </head>
+  <body>
+    <!--HEADER WEB-->
+    <header class="dock-bar">
+      <img class="imgLogo" src="/LogoHome/Logoweb1.png" alt="Logo" />
+      <div class="bar-right">
+        <div class="item" id="home-btn">
+          <img
+            src="/icon-header/home.png"
+            alt="home"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          <a class="trangchu" href="../index.html"> Trang chủ</a>
+        </div>
+        <div class="item" id="headerCartBtn">
+          <img
+            src="/icon-header/cart.png"
+            alt="cart"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Giỏ hàng
+          <span class="cart-count-header" id="cart-count-header">0</span>
+        </div>
+        <div class="item" id="contactBtn">
+          <img
+            src="/icon-header/contact.png"
+            alt="contact"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Liên hệ
+        </div>
+        <!--Drop Menu khi di chuot vao THAM GIA-->
+        <div class="item join-dropdown" id="joinBtn">
+          <img
+            src="/icon-header/user.png"
+            alt="join"
+            style="
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              margin-right: 6px;
+              filter: invert(100%);
+            "
+          />
+          Tham gia
+          <div class="dropdown-menu">
+            <div class="dropdown-item" id="loginBtn">Đăng nhập</div>
+            <div class="dropdown-item" id="registerBtn">Đăng ký</div>
+          </div>
+        </div>
+      </div>
+    </header>
+ <!--Back thực đơn-->
+    <div class="back-to-menu">
+  <a href="../index.html#search">← Trở về</a>
+</div>
+    <!--noi dung web-->
+    <main class="product-detail">
+      <div class="product-image">
+        <img src="/img-food/Soup.png" alt="spaghetti" />
+      </div>
+      <div class="product-info">
+        <h1 class="food-title">Súp gà phô mai</h1>
+        <p class="fprice" style="color: red; font-weight: 700; font-size: 25px;">150.000 VND</p>
+        <ul class="info-list">
+          <li><strong>Tên món:</strong>Súp gà phô mai</li>
+          <li><strong>Hàm lượng calo:</strong> Khoảng 400 kcal</li>
+          <li>
+            <strong>Thành phần:</strong> Vỏ mềm, bò băm nhuyễn nướng, phô mai
+            chảy, xà lách, cà chua, ngô, sốt mayonnaise
+          </li>
+          <li><strong>Kích thước khẩu phần:</strong> 1 bánh (200g)</li>
+          <li>
+            <strong>Bảo quản:</strong> Ăn ngay sau khi chế biến. Không để quá 2
+            giờ ở nhiệt độ phòng. Thông tin khác: Có thể yêu cầu thêm trứng,
+            không sốt hoặc đổi sang bánh mè.
+          </li>
+        </ul>
+        <div class="food-actions">
+          <button class="add-food">+ Thêm vào giỏ</button>
+          <button class="order-food">Đặt hàng ngay</button>
+        </div>
+      </div>
+    </main>
+   
+
+    <!--Footer cho web-->
+   <footer class="footer" style="background-color: #333; color: rgb(189, 189, 189); padding: 40px 20px;">
+  <div class="footer-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; max-width: 1200px; margin: auto;">
+    
+    <!-- Cột 1: Bản đồ -->
+    <div style="flex: 1.5; min-width: 250px;">
+      <h3 style="color:white;">Địa chỉ trên bản đồ:</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3922.331373177018!2d105.38923987997754!3d10.553221062721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a157fb8412f75%3A0x6fc336d02d70595b!2zTmjDoCBDw6AgUGjDqg!5e0!3m2!1svi!2sus!4v1748236231217!5m2!1svi!2sus"
+        width="100%" height="360" style="border: 0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Cột 2: Tên + slogan + liên hệ -->
+    <div style="flex: 1; min-width: 240px;">
+      <h2 style="font-weight: bold; margin-bottom: 8px; color: #ffbb33;">FooD_Wuy</h2>
+      <p>Ngon lành - Nhanh chóng - Đậm đà hương vị Việt</p>
+      <div style="margin-top: 130px;">
+        <h3 style="color:white;">Liên hệ</h3>
+        <p style="margin: 0;">Địa chỉ: Kiến An, Đường TL942,<br />huyện Chợ Mới, tỉnh An Giang.</p>
+        <p style="margin: 0;">Hotline:<a href="tel:0393730755" style="text-decoration: none; color:white;"> 0393730755</a></p>
+        <p style="margin: 0;">Email: giahuylx0208@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Cột trung tâm gồm: Liên kết nhanh + Chính sách + MXH -->
+    <div style="flex: 1.5; min-width: 300px;">
+      <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+        <!-- Liên kết nhanh -->
+        <div style="flex: 1; min-width: 120px;">
+          <h3 style="color:white;">Liên kết nhanh</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><a class="lienketnhanh" href="../index.html" style="text-decoration: none;">Trang chủ</a></li>
+            <li><a class="lienketnhanh" href="#" id="aboutUsBtn" style="text-decoration: none;">Về chúng tôi</a></li>
+            <li><a class="lienketnhanh" href="#footerContactBtn" id="footerContactBtn" style="text-decoration: none;">Liên hệ</a></li>
+          </ul>
+        </div>
+
+        <!-- Chính sách -->
+        <div style="flex: 1; min-width: 120px;">
+          <h3 style="color:white;">Chính sách</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li><a  class="chinhsach" href="../web-footer/chinhsachhd.html" style="text-decoration: none;">Chính sách hoạt động</a></li>
+            <li><a  class="chinhsach" href="../web-footer/chinhsachqd.html" style="text-decoration: none;">Chính sách và quy định</a></li>
+            <li><a  class="chinhsach" href="../web-footer/chinhsachbmtt.html" style="text-decoration: none;">Chính sách bảo mật thông tin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- MXH nằm dưới 2 cột kia -->
+      <div style="margin-top: 92px;">
+        <h3 style="color:white;">Liên hệ mạng xã hội</h3>
+        <div style="display: flex; gap: 12px; margin-top: 12px;">
+          <a href="https://www.facebook.com/" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width: 20px;" />
+          </a>
+          <a href="https://www.instagram.com/_h.zhui?igsh=MXRoaTh6cnoxN2F4aQ%3D%3D&utm_source=qr" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px;" />
+          </a>
+          <a href="https://www.youtube.com/@zhuy2826" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 22px;" />
+          </a>
+          <a href="tel:0393730755" target="_blank" style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid white; display: flex; align-items: center; justify-content: center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Twitter" style="width: 20px;" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom" style="text-align: center; padding-top: 20px; margin-top: 40px; border-top: 1px solid #555;">
+    <p>© 2025 FooD_Wuy. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+    <!--POPUP giỏ hàng-->
+    <div class="popup-overlay" id="orderPopup">
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">×</span>
+        <h2>Đặt hàng nhanh</h2>
+        <form id="orderForm">
+          <label for="foodName">Món ăn:</label>
+          <input type="text" id="foodName" name="foodName" readonly />
+          <label for="quantity">Số lượng:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            value="1"
+            required
+          />
+          <label for="customerName">Tên bạn:</label>
+          <input type="text" id="customerName" name="customerName" required />
+          <label for="phone">Số điện thoại:</label>
+          <input type="tel" id="phone" name="phone" required />
+          <label for="diachi">Địa chỉ:</label>
+          <input type="text" id="diachi" name="diachi" required />
+          <button type="submit">Gửi đơn hàng</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Cart Icon -->
+    <div class="cart-icon" id="cart-icon" onclick="openCart()">
+      <img src="/icon-header/cart.png" alt="Cart" />
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!--POPUP giỏ hàng-->
+    <div class="popup-overlay" id="cartPopup">
+      <div class="cart-content">
+        <span class="close-cart" id="closeCart">×</span>
+        <h2>Giỏ hàng của bạn</h2>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total-section">
+          <span class="cart-total" id="cartTotal">0 VND</span>
+          <button class="clear-cart-btn" id="clearCartBtn">Xóa tất cả</button>
+        </div>
+        <form id="cartOrderForm">
+          <h3>Thông tin đặt hàng</h3>
+          <label for="cusName">Tên bạn:</label>
+          <input type="text" id="cusName" name="cusName" required />
+          <label for="cusPhone">Số điện thoại:</label>
+          <input type="tel" id="cusPhone" name="cusPhone" required />
+          <label for="diachi">Địa chỉ:</label>
+          <input type="text" id="diachi" name="diachi" required />
+          <button type="submit">Đặt hàng</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="notificationPopup">
+      <div class="notification-content">
+        <span class="close-notification" id="closeNotification">×</span>
+        <div class="notification-icon" alt="Success">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+          >
+            <path
+              fill="#2ecc71"
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-1.7 14.3L6.7 12l1.4-1.4 2.2 2.2 5.6-5.6 1.4 1.4-7 7z"
+            />
+          </svg>
+        </div>
+        <h3 id="notificationTitle">Thành công!</h3>
+        <p id="notificationMessage">Đã xóa tất cả sản phẩm khỏi giỏ hàng.</p>
+        <button id="notificationOkBtn">OK</button>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="confirmPopup">
+      <div class="confirm-content">
+        <span class="close-confirm" id="closeConfirm">×</span>
+        <div class="confirm-icon" alt="Confirm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="60"
+            height="60"
+          >
+            <path
+              fill="#f39c12"
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"
+            />
+          </svg>
+        </div>
+        <h3 id="confirmTitle">Xác nhận</h3>
+        <p id="confirmMessage">
+          Bạn có chắc chắn muốn xóa tất cả sản phẩm khỏi giỏ hàng?
+        </p>
+        <div class="confirm-buttons">
+          <button id="confirmCancelBtn">Hủy</button>
+          <button id="confirmOkBtn">Xóa tất cả</button>
+        </div>
+      </div>
+    </div>
+    <!--POPUP Đăng nhập nhanh-->
+    <div class="popup-overlay" id="loginPopup">
+      <div class="popup-content">
+        <span class="close-btn" id="closeLoginPopup">×</span>
+        <h2 class="title-login">Đăng nhập</h2>
+        <form id="loginForm">
+          <label for="loginUsername">Tên đăng nhập:</label>
+          <input type="text" id="loginUsername" name="loginUsername" required />
+
+          <label for="loginPassword">Mật khẩu:</label>
+          <input
+            type="password"
+            id="loginPassword"
+            name="loginPassword"
+            required
+          />
+          <div class="remember-group">
+            <input type="checkbox" id="rememberMe" />
+            <label class="text-rememberMe" for="rememberMe"
+              >Ghi nhớ đăng nhập</label
+            >
+          </div>
+
+          <button type="submit">Đăng nhập</button>
+        </form>
+      </div>
+    </div>
+    <!--POPUP Liên Hệ-->
+    <div class="popup-overlay" id="contactPopup">
+      <div class="contact-content">
+        <span class="close-contact" id="closeContact">×</span>
+        <h2>Liên hệ với FooD_Wuy</h2>
+        <div class="contact-grid">
+          <a href="https://www.facebook.com/hghuy06/" class="contact-tile fb">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+              alt="Facebook"
+            />
+            <span>Facebook</span>
+          </a>
+          <a href="tel:0393730755" class="contact-tile zalo">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+              alt="Zalo"
+            />
+            <span>Zalo</span>
+          </a>
+          <a href="mailto:giahuylx0208@gmail.com" class="contact-tile gmail">
+            <img
+              src="https://images.icon-icons.com/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png"
+              alt="Email"
+            />
+            <span>Email</span>
+          </a>
+          <a href="tel:0393730755" class="contact-tile phone">
+            <img
+              src="https://freesvg.org/img/phone-call-icon.png"
+              alt="Phone"
+            />
+            <span>Hotline</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--POPUP VỀ CHÚNG TÔI-->
+    <div class="popup-overlay" id="aboutUsPopup">
+      <div class="aboutus-content">
+        <span class="close-aboutus" id="closeAboutUs">×</span>
+        <div class="aboutus-header">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+            alt="About Us"
+          />
+          <h2>Giới thiệu về <span class="brand-name">FooD_Wuy</span></h2>
+        </div>
+        <div class="aboutus-text">
+          <p>
+            <strong>FooD_Wuy</strong> là nơi chuyên cung cấp các món
+            <span class="highlight">đồ ăn nhanh</span> và
+            <span class="highlight">thức uống</span> chất lượng, được chế biến
+            sạch sẽ, ngon miệng và giao hàng tận nơi cực nhanh!
+          </p>
+          <p>
+            Với tiêu chí
+            <em
+              >"<span class="highlight"
+                >Ngon lành - Nhanh chóng - Chill cùng bạn!</span
+              >"</em
+            >, tụi mình luôn nỗ lực để mang đến trải nghiệm tuyệt vời nhất cho
+            khách hàng.
+          </p>
+          <p>Cảm ơn bạn đã tin tưởng và ủng hộ ❤️!</p>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
