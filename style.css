@@ -97,7 +97,7 @@ body {
   border-bottom: 2px solid #fff;
 }
 
-.imgLogo {
+.imgLogo {                                                                  
   width: 130px;
   transition: transform 0.25s ease-in-out;
   filter: brightness(1.6);
@@ -280,6 +280,7 @@ body {
   height: 200px;
   object-fit: contain;
 }
+
 .food-img1{
   margin-top: 20px;
   margin-left: 50px;
@@ -330,7 +331,6 @@ body {
   background-color: #2ecc71;
   color: white;
 }
-
 .add-food {
   background-color: #e74c3c;
   color: white;
